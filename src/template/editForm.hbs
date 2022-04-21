@@ -1,0 +1,39 @@
+<div class='form-content'>
+  <h3>Create or edit your note</h3>
+
+  <div>
+    <form>
+      {{#with note}}
+        <input type='hidden' id='id' name='id' value='{{id}}' />
+        <label for='name'>Name</label>
+        <input
+          type='text'
+          id='name'
+          name='name'
+          placeholder='Note name..'
+          value='{{name}}'
+          required
+        />
+      {{/with}}
+
+      <label for='category'>Category</label>
+      <select id='category' name='category'>
+        {{#each categories}}
+          {{#if active}}
+            <option value='{{id}}' selected>{{name}}</option>
+          {{else}}
+            <option value='{{id}}'>{{name}}</option>
+          {{/if}}
+
+        {{/each}}
+      </select>
+
+      <label for='content'>Content</label>
+      {{#with note}}
+        <textarea id='content' name='content' placeholder='Content...'>{{content}}</textarea>
+      {{/with}}
+
+      <input type='submit' value='Submit' />
+    </form>
+  </div>
+</div>

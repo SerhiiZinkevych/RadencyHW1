@@ -1,0 +1,30 @@
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Created</th>
+      <th>Category</th>
+      <th>Content</th>
+      <th>Dates</th>
+      <th></th>
+      <th data-type='showArchive'><i class='fa-solid fa-box-archive'></i></th>
+      <th data-type='deleteAll'><i class='fa-solid fa-trash-can'></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this}}
+      <tr data-id={{id}}>
+        <td><i class='fa-solid {{icon}}'></i></td>
+        <td>{{name}}</td>
+        <td>{{created}}</td>
+        <td>{{categoryName}}</td>
+        <td>{{content}}</td>
+        <td>{{dates}}</td>
+        <td data-type='edit'><i class='fa-solid fa-pencil'></i></td>
+        <td data-type='archive'><i class='fa-solid fa-box-archive'></i></td>
+        <td data-type='delete'><i class='fa-solid fa-trash-can'></i></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>

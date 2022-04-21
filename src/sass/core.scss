@@ -1,0 +1,47 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn-create {
+  display: flex;
+  padding: 10px 20px;
+  font-size: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+  margin-bottom: 50px;
+}
+
+.archivedNotes {
+  width: 1000px;
+  td:last-child {
+    cursor: pointer;
+    text-align: center;
+    padding: 0;
+    width: 50px;
+    color: #616161;
+  }
+  td:last-child:hover {
+    color: #222;
+  }
+}
+
+.message {
+  background-color: #fff;
+  padding: 30px 70px;
+  border-radius: 5px;
+}

@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Note Category</th>
+      <th>Active</th>
+      <th>Archived</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each this}}
+      <tr>
+        <td><i class='fa-solid {{icon}}'></i></td>
+        <td>{{name}}</td>
+        <td>{{active}}</td>
+        <td>{{archived}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
